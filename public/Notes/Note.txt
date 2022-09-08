@@ -1,3 +1,6 @@
+//
+ select the line you want to move then 
+  alt + up
 
 //fontawesome
 npm install fontawesome@4.7.0
@@ -23,3 +26,24 @@ import PropTypes from 'prop-types'
 
 "react": "^18.2.0",
     "react-dom": "^18.2.0",
+
+//Git command
+1. create repository on github
+2. go to command line on react app and type
+    git remote add origin https://github.com/pankajpuri/exclusivepaintersltd.git
+3. Now your poject is hooked to the github.
+then following 
+    i.  git add .
+    ii. git commit -m "first commit"
+/////////////////
+git branch -M main
+git remote add origin https://github.com/pankajpuri/exclusivepaintersltd.git
+git push -u origin main
+
+//Types checking - enables to catch bugs related to typpe checking.
+This will also give documentation to your component, so wheneveer you
+ want to use a reuseable comoponent, you don't have to look at it's render memthod
+ to figure out what props yoou should give to this component
+  need to install the package proptypes as follows
+ npm i prop-types@15.6.2
+ impoorrt PropTypes from 'proop-types'

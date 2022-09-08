@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { getJobs } from "./jobs";
-import Like from "./common/like";
+import { getJobs } from "../jobs/jobs";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
+import JobTypesGroup from "./jobtypesGroup";
+import { getJobType } from "../jobs/jobtype";
+import JobsTable from "./jobsTable";
 class DisplayJobs extends Component {
   state = {
     jobs: getJobs(),
+    jobType: [],
     tableHeader: [
       "Address",
       "Number Of Days",
@@ -19,6 +22,10 @@ class DisplayJobs extends Component {
     pageSize: 4,
     currentPage: 1,
   };
+  componentDidMount() {
+    const jobType = [{ type: "All Job Types" }, ...getJobType()];
+    this.setState({ jobType });
+  }
   handleDelete = (job) => {
     const jobs = this.state.jobs.filter((j) => j._id !== job._id);
     this.setState({ jobs });
@@ -33,56 +40,52 @@ class DisplayJobs extends Component {
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
+  handleSelectedJobType = (jobType) => {
+    this.setState({ selectedJobType: jobType, currentPage: 1 });
+  };
   render() {
     const { length } = this.state.jobs;
-    const { jobs: allJobs, currentPage, pageSize, tableHeader } = this.state;
+    const {
+      jobs: allJobs,
+      currentPage,
+      pageSize,
+      tableHeader,
+      jobType,
+      selectedJobType,
+    } = this.state;
     if (length === 0) return <p>There are no jobs in the database.</p>;
-
-    const jobs = paginate(allJobs, currentPage, pageSize);
+    const filtered =
+      selectedJobType && selectedJobType._id
+        ? allJobs.filter((jt) => jt.jobType._id === selectedJobType._id)
+        : allJobs;
+    const jobs = paginate(filtered, currentPage, pageSize);
 
     return (
       <React.Fragment>
         <div className="container py-5">
-          <p>There are {length} in the database.</p>
-          <table className="table table-striped">
-            <thead>
-              {tableHeader.map((header) => (
-                <th>
-                  <td>{header}</td>
-                </th>
-              ))}
-            </thead>
-            <tbody>
-              {jobs.map((job) => (
-                <tr key={job._id}>
-                  <td>{job.address}</td>
-                  <td>{job.numberOfDays}</td>
-                  <td>{job.rating}</td>
-                  <td>{job.grade}</td>
-                  <td>{job.startDate}</td>
-                  <td>{job.finishDate}</td>
-                  <td>{job.jobType.type}</td>
-                  <td>
-                    <Like
-                      liked={job.liked}
-                      onClick={() => this.handleLike(job)}
-                    />
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => this.handleDelete(job)}
-                      className="btn btn-danger btn-sm"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <p>There are {filtered.length} in the database.</p>
+          <div className="row">
+            <div className="col-2">
+              <JobTypesGroup
+                jobLists={jobType}
+                selectedJobType={selectedJobType}
+                onJobTypeSelect={this.handleSelectedJobType}
+              />
+            </div>
+            <div className="col-10">
+              <JobsTable
+                tableHeader={tableHeader}
+                jobs={jobs}
+                onLike={this.handleLike}
+                onDelete={this.handleDelete}
+              />
+            </div>
+          </div>
+
           <Pagination
-            itemsCount={length}
+            itemsCount={filtered.length}
             pageSize={pageSize}
+            currentPage={currentPage}
             onPageChange={this.handlePageChange}
           />
         </div>
