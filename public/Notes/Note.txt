@@ -1,0 +1,25 @@
+
+//fontawesome
+npm install fontawesome@4.7.0
+
+//Bootstrap
+npm install bootstrap@5.1.3
+
+//React reveal is an animation fo React. 
+npm install react-reveal --save
+
+//remove if somehow you mess it up with their version
+  npm rm react react-dom 
+//install back
+ npm i -s react react-dom
+//install lodash javascript library
+npm i lodash@4.17.10
+import _ from "lodash"
+//it provides pagination method
+
+//install props-type for type checking
+npm i props-type@15.6.2
+import PropTypes from 'prop-types'
+
+"react": "^18.2.0",
+    "react-dom": "^18.2.0",

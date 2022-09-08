@@ -10,6 +10,9 @@ root.render(
     <App />
   </React.StrictMode>
 );
+//OR below code;
+// ReactDOM.createRoot(<App/>,document.getElementById('root'));
+// root.render();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

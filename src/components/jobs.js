@@ -1,0 +1,103 @@
+const jobs = [
+  {
+    _id: "20211",
+    numberOfDays: 28,
+    rating: 5,
+    grade: "Living",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "98 Fowlds Avenue, Sandringham",
+
+    jobType: { _id: "1", type: "Exterior" },
+    liked: true,
+  },
+  {
+    _id: "20212a",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "For Sale!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "115 Fowlds Avenue, Sandringham",
+    jobType: { _id: "2", type: "Interior" },
+    liked: false,
+  },
+  {
+    _id: "202102b",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "For Sale!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "115 Fowlds Avenue, Sandringham",
+    jobType: { _id: "3", type: "Exterior" },
+    liked: true,
+  },
+  {
+    _id: "20214",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "For Sale!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "98 Hillsborough Road, Hillsborough",
+    jobType: { _id: "2", type: "Exterior" },
+  },
+  {
+    _id: "20215",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "For Sale!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "25 Fifth Avenue, Mount Albert",
+    jobType: { _id: "2", type: "Exterior" },
+  },
+  {
+    _id: "20216",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "Living",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "98 Fowlds Avenue, Sandringham",
+    jobType: { _id: "4", type: "Fence" },
+  },
+  {
+    _id: "20217",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "Living!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "115 Fowlds Avenue, Sandringham",
+    jobType: { _id: "4", type: "Fence" },
+  },
+  {
+    _id: "20218",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "Living",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "7 Grant Street, Mount Albert",
+    jobType: { _id: "3", type: "Roof" },
+  },
+  {
+    _id: "20212",
+    numberOfDays: 35,
+    rating: 5,
+    grade: "For Sale!",
+    startDate: "2021-12-18",
+    finishDate: "2022-01-26",
+    address: "1/411 Blockhouse Bay Road, Blockhouse Bay",
+    jobType: { _id: "3", type: "Roof" },
+  },
+];
+
+export function getJobs() {
+  return jobs;
+}
+export function getJob(id) {
+  return jobs.find((j) => j._id === id);
+}
