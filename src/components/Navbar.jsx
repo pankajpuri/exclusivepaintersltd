@@ -20,27 +20,24 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/displayJobs"
-              >
-                Jobs
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/customers">
-                Customers
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contract">
-                Contracts
-              </NavLink>
-            </li>
-          </ul>
+          <NavLink
+            className="nav-item nav-link"
+            aria-current="page"
+            to="/displayJobs"
+          >
+            Jobs
+          </NavLink>
+
+          <NavLink className="nav-item nav-link" to="/customers">
+            Customers
+          </NavLink>
+
+          <NavLink className="nav-item nav-link" to="/contract">
+            Contracts
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/loginForm">
+            Login
+          </NavLink>
         </div>
       </div>
     </nav>

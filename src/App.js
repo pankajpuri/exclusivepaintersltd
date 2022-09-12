@@ -10,14 +10,16 @@ import Contract from "./components/contract";
 import Navbar from "./components/Navbar";
 import NotFound from "./components/notFound";
 import JobForm from "./components/jobForm";
+import LoginForm from "./components/common/loginForm";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       {/* <DisplayJobs /> */}
       <div className="content">
         <Switch>
+          <Route path="/loginForm" component={LoginForm} />
           <Route path="/displayJobs/:id" component={JobForm} />
           <Route path="/customers" component={Cusomters} />
           <Route path="/contract" component={Contract} />

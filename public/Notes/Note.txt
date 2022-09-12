@@ -14,6 +14,7 @@
  ii. this is for native mobile applications
  npm i react-router-native 
 //
+ shift+command+p => to wrap the element with desire tag like <div></div>
  select the line you want to move then 
   alt + up
 
