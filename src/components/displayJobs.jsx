@@ -2,28 +2,21 @@ import React, { Component } from "react";
 import { getJobs } from "../jobs/jobs";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
-import JobTypesGroup from "./jobtypesGroup";
 import { getJobType } from "../jobs/jobtype";
-import JobsTable from "./jobsTable";
+import JobTypes from "./common/displayJobTypes";
+import "bootstrap/dist/css/bootstrap.css";
+import JobTables from "./jobTables";
+import _ from "lodash";
 class DisplayJobs extends Component {
   state = {
     jobs: getJobs(),
     jobType: [],
-    tableHeader: [
-      "Address",
-      "Number Of Days",
-      "Rating",
-      "Grade",
-      "Start Date",
-      "Finish Date",
-      "Job Type",
-      "",
-    ],
+    sortColumn: { path: "address", order: "asc" },
     pageSize: 4,
     currentPage: 1,
   };
   componentDidMount() {
-    const jobType = [{ type: "All Job Types" }, ...getJobType()];
+    const jobType = [{ _id: "", type: "All Job Types" }, ...getJobType()];
     this.setState({ jobType });
   }
   handleDelete = (job) => {
@@ -40,44 +33,66 @@ class DisplayJobs extends Component {
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
-  handleSelectedJobType = (jobType) => {
-    this.setState({ selectedJobType: jobType, currentPage: 1 });
+  handleSelectJobTypes = (jobTypes) => {
+    this.setState({ selectedJobType: jobTypes });
+    this.setState({ currentPage: 1 });
+  };
+  handleSort = (sortColumn) => {
+    this.setState({ sortColumn });
+  };
+  getPageData = () => {
+    const {
+      jobs: allJobs,
+      currentPage,
+      pageSize,
+      selectedJobType,
+      sortColumn,
+    } = this.state;
+    const filtered =
+      selectedJobType && selectedJobType._id
+        ? allJobs.filter((j) => j.jobType._id === selectedJobType._id)
+        : allJobs;
+
+    const sortedColumn = _.orderBy(
+      filtered,
+      [sortColumn.path],
+      [sortColumn.order]
+    );
+
+    const jobs = paginate(sortedColumn, currentPage, pageSize);
+    return { filtered, jobs };
   };
   render() {
     const { length } = this.state.jobs;
     const {
-      jobs: allJobs,
       currentPage,
       pageSize,
       tableHeader,
       jobType,
       selectedJobType,
+      sortColumn,
     } = this.state;
     if (length === 0) return <p>There are no jobs in the database.</p>;
-    const filtered =
-      selectedJobType && selectedJobType._id
-        ? allJobs.filter((jt) => jt.jobType._id === selectedJobType._id)
-        : allJobs;
-    const jobs = paginate(filtered, currentPage, pageSize);
-
+    const { filtered, jobs } = this.getPageData();
     return (
       <React.Fragment>
         <div className="container py-5">
           <p>There are {filtered.length} in the database.</p>
           <div className="row">
             <div className="col-2">
-              <JobTypesGroup
-                jobLists={jobType}
+              <JobTypes
+                jobTypes={jobType}
+                OnSelectJobTypes={this.handleSelectJobTypes}
                 selectedJobType={selectedJobType}
-                onJobTypeSelect={this.handleSelectedJobType}
               />
             </div>
             <div className="col-10">
-              <JobsTable
-                tableHeader={tableHeader}
+              <JobTables
                 jobs={jobs}
-                onLike={this.handleLike}
-                onDelete={this.handleDelete}
+                tableHeader={tableHeader}
+                onClick={this.handleLike}
+                onSort={this.handleSort}
+                sortColumn={sortColumn}
               />
             </div>
           </div>

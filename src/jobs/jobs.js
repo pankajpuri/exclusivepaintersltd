@@ -22,6 +22,7 @@ const jobs = [
     address: "115 Fowlds Avenue, Sandringham",
     jobType: { _id: "2", type: "Interior" },
     liked: false,
+    liked: true,
   },
   {
     _id: "202102b",
@@ -43,6 +44,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "98 Hillsborough Road, Hillsborough",
     jobType: { _id: "1", type: "Exterior" },
+    liked: true,
   },
   {
     _id: "20215",
@@ -53,6 +55,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "25 Fifth Avenue, Mount Albert",
     jobType: { _id: "1", type: "Exterior" },
+    liked: true,
   },
   {
     _id: "20216",
@@ -63,6 +66,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "98 Fowlds Avenue, Sandringham",
     jobType: { _id: "3", type: "Fence" },
+    liked: false,
   },
   {
     _id: "20217",
@@ -73,6 +77,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "115 Fowlds Avenue, Sandringham",
     jobType: { _id: "3", type: "Fence" },
+    liked: false,
   },
   {
     _id: "20218",
@@ -83,6 +88,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "7 Grant Street, Mount Albert",
     jobType: { _id: "4", type: "Roof" },
+    liked: false,
   },
   {
     _id: "20212",
@@ -93,6 +99,7 @@ const jobs = [
     finishDate: "2022-01-26",
     address: "1/411 Blockhouse Bay Road, Blockhouse Bay",
     jobType: { _id: "4", type: "Roof" },
+    liked: false,
   },
 ];
 

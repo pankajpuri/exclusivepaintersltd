@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+
 const Like = ({ liked, onClick }) => {
   let classes = "fa fa-heart";
   if (!liked) classes += "-o";
@@ -6,9 +7,9 @@ const Like = ({ liked, onClick }) => {
     <i
       onClick={onClick}
       className={classes}
-      aria-hidden="true"
+      // aria-hidden="true"
       style={{ cursor: "pointer" }}
-    ></i>
+    />
   );
 };
 

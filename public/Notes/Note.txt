@@ -1,6 +1,25 @@
+//Query string
+ npm i query-string@6.1.0
+
+//React router
+ i. this is for React dom or browser but for this we only using this
+ npm i react-router-dom@4.3.1
+  .import {Browser} from "react-router-dom"; //In index.JSX
+  ..<BrowserRouter><App></App></BrowserRouter>
+ .import {Route,Switch} from 'react-router-dom'; //Whichever page is using navigation
+ ..<Switch>
+     <Router path='/About' component={About}/>
+    </Switch>
+
+ ii. this is for native mobile applications
+ npm i react-router-native 
 //
  select the line you want to move then 
   alt + up
+
+  cltr + D = to select similar tag
+ //Auto Import - ES6, TS, JSX, TSX
+ install this plugins to auto import 
 
 //fontawesome
 npm install fontawesome@4.7.0
