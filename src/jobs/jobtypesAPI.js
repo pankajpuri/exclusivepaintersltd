@@ -1,4 +1,4 @@
-export const jobType = [
+export const jobTypes = [
   { _id: "1", type: "Exterior" },
   { _id: "2", type: "Interior" },
   { _id: "3", type: "Fence" },
@@ -6,5 +6,5 @@ export const jobType = [
 ];
 
 export function getJobType() {
-  return jobType.filter((j) => j);
+  return jobTypes.filter((j) => j);
 }

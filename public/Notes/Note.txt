@@ -1,3 +1,8 @@
+
+//for validation 
+    npm i joi-browser@13.4
+    import Joi from "joi-browser"; // in the actual form like login/register
+    const schema = {}
 //Query string
  npm i query-string@6.1.0
 

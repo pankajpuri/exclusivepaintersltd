@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import { getJobs } from "../jobs/jobs";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
-import { getJobType } from "../jobs/jobtype";
+import { getJobType } from "../jobs/jobtypesAPI";
 import JobTypes from "./common/displayJobTypes";
 import "bootstrap/dist/css/bootstrap.css";
 import JobTables from "./jobTables";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 class DisplayJobs extends Component {
   state = {
     jobs: getJobs(),
-    jobType: [],
+    jobTypes: [],
     sortColumn: { path: "address", order: "asc" },
     pageSize: 4,
     currentPage: 1,
   };
   componentDidMount() {
-    const jobType = [{ _id: "", type: "All Job Types" }, ...getJobType()];
-    this.setState({ jobType });
+    const jobTypes = [{ _id: "", type: "All Job Types" }, ...getJobType()];
+    this.setState({ jobTypes });
   }
   handleDelete = (job) => {
     const jobs = this.state.jobs.filter((j) => j._id !== job._id);
@@ -68,7 +69,7 @@ class DisplayJobs extends Component {
       currentPage,
       pageSize,
       tableHeader,
-      jobType,
+      jobTypes,
       selectedJobType,
       sortColumn,
     } = this.state;
@@ -81,12 +82,15 @@ class DisplayJobs extends Component {
           <div className="row">
             <div className="col-2">
               <JobTypes
-                jobTypes={jobType}
+                jobTypes={jobTypes}
                 OnSelectJobTypes={this.handleSelectJobTypes}
                 selectedJobType={selectedJobType}
               />
             </div>
             <div className="col-10">
+              <Link className="btn btn-primary" to="/displayJobs/new">
+                New Job
+              </Link>
               <JobTables
                 jobs={jobs}
                 tableHeader={tableHeader}

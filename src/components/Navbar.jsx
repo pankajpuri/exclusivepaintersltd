@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import DisplayJobs from "./displayJobs";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="#">
-          Navbar
+          Exclusive Painters
         </Link>
         <button
           className="navbar-toggler"
@@ -37,6 +36,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink className="nav-item nav-link" to="/loginForm">
             Login
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/registerForm">
+            Register
           </NavLink>
         </div>
       </div>

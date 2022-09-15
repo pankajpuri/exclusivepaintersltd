@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import DisplayJobs from "./components/displayJobs";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
@@ -11,7 +9,8 @@ import Navbar from "./components/Navbar";
 import NotFound from "./components/notFound";
 import JobForm from "./components/jobForm";
 import LoginForm from "./components/common/loginForm";
-
+import RegisterForm from "./components/common/registerForm";
+import "./App.css";
 function App() {
   return (
     <div className="container">
@@ -19,13 +18,14 @@ function App() {
       {/* <DisplayJobs /> */}
       <div className="content">
         <Switch>
+          <Route path="/registerForm" component={RegisterForm} />
           <Route path="/loginForm" component={LoginForm} />
           <Route path="/displayJobs/:id" component={JobForm} />
           <Route path="/customers" component={Cusomters} />
           <Route path="/contract" component={Contract} />
           <Route path="/notFound" component={NotFound} />
           <Route path="/displayJobs" component={DisplayJobs} />
-          <Redirect from="/" to="/displayJobs" />
+          <Redirect from="/" exact to="/displayJobs" />
 
           <Redirect to="/notFound" />
         </Switch>

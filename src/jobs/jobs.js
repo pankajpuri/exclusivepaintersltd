@@ -1,4 +1,4 @@
-import { jobType } from "./jobtype";
+import * as jobTypesAPI from "./jobtypesAPI";
 const jobs = [
   {
     _id: "20211",
@@ -8,7 +8,6 @@ const jobs = [
     startDate: "2021-12-18",
     finishDate: "2022-01-26",
     address: "98 Fowlds Avenue, Sandringham",
-
     jobType: { _id: "1", type: "Exterior" },
     liked: true,
   },
@@ -22,7 +21,6 @@ const jobs = [
     address: "115 Fowlds Avenue, Sandringham",
     jobType: { _id: "2", type: "Interior" },
     liked: false,
-    liked: true,
   },
   {
     _id: "202102b",
@@ -108,4 +106,21 @@ export function getJobs() {
 }
 export function getJob(id) {
   return jobs.find((j) => j._id === id);
+}
+export function saveJob(job) {
+  let jobInDb = jobs.find((j) => j._id === job.jobId) || {};
+  jobInDb.address = job.address;
+  jobInDb.jobType = jobTypesAPI.jobTypes.find((jt) => jt._id === job.jobTypeId);
+  jobInDb.rating = job.rating;
+  jobInDb.grade = job.grade;
+  jobInDb.startDate = job.startDate;
+  jobInDb.finishDate = job.finishDate;
+  jobInDb.numberOfDays = job.numberOfDays;
+
+  if (!jobInDb._id) {
+    jobInDb._id = Date.now().toString();
+    jobs.push(jobInDb);
+  }
+
+  return jobInDb;
 }

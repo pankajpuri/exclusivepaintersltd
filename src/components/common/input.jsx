@@ -1,19 +1,20 @@
 import React from "react";
-const Login = ({ name, onChange, label }) => {
+const Input = ({ name, onChange, label, errors, value, type }) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
       <input
         autoFocus
+        type={type}
         onChange={onChange}
-        value={name}
+        value={value}
         name={name}
         id={name}
-        type="text"
         className="form-control"
       />
+      {errors && <div className="alert alert-danger">{errors}</div>}
     </div>
   );
 };
 
-export default Login;
+export default Input;
