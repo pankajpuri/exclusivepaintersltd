@@ -1,16 +1,10 @@
 import React from "react";
-const SelectOption = ({ label, name, error, value, options, onChange }) => {
+const Select = ({ label, name, error, options, ...rest }) => {
   return (
     <div className="form-group mb-3">
       <label htmlFor={name}>{label}</label>
 
-      <select
-        id={name}
-        name={name}
-        error={error}
-        onChange={onChange}
-        className="form-select"
-      >
+      <select id={name} name={name} {...rest} className="form-select">
         <option value="" />
         {options.map((option) => (
           <option key={option._id} value={option._id}>
@@ -23,4 +17,4 @@ const SelectOption = ({ label, name, error, value, options, onChange }) => {
   );
 };
 
-export default SelectOption;
+export default Select;

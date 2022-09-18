@@ -6,19 +6,22 @@ import { getJobType } from "../jobs/jobtypesAPI";
 import JobTypes from "./common/displayJobTypes";
 import "bootstrap/dist/css/bootstrap.css";
 import JobTables from "./jobTables";
+import SearchBox from "./common/searchBox";
 import _ from "lodash";
 import { Link } from "react-router-dom";
 class DisplayJobs extends Component {
   state = {
-    jobs: getJobs(),
+    jobs: [],
     jobTypes: [],
-    sortColumn: { path: "address", order: "asc" },
     pageSize: 4,
     currentPage: 1,
+    searchQuery: "",
+    selectedJobType: null,
+    sortColumn: { path: "address", order: "asc" },
   };
   componentDidMount() {
     const jobTypes = [{ _id: "", type: "All Job Types" }, ...getJobType()];
-    this.setState({ jobTypes });
+    this.setState({ jobTypes, jobs: getJobs() });
   }
   handleDelete = (job) => {
     const jobs = this.state.jobs.filter((j) => j._id !== job._id);
@@ -35,24 +38,32 @@ class DisplayJobs extends Component {
     this.setState({ currentPage: page });
   };
   handleSelectJobTypes = (jobTypes) => {
-    this.setState({ selectedJobType: jobTypes });
-    this.setState({ currentPage: 1 });
+    this.setState({
+      selectedJobType: jobTypes,
+      searchQuery: "",
+      currentPage: 1,
+    });
+    this.setState({});
   };
   handleSort = (sortColumn) => {
     this.setState({ sortColumn });
   };
   getPageData = () => {
     const {
-      jobs: allJobs,
-      currentPage,
       pageSize,
-      selectedJobType,
+      currentPage,
       sortColumn,
+      selectedJobType,
+      searchQuery,
+      jobs: allJobs,
     } = this.state;
-    const filtered =
-      selectedJobType && selectedJobType._id
-        ? allJobs.filter((j) => j.jobType._id === selectedJobType._id)
-        : allJobs;
+    let filtered = allJobs;
+    if (searchQuery)
+      filtered = allJobs.filter((j) =>
+        j.address.toLowerCase().startsWith(searchQuery.toLocaleLowerCase())
+      );
+    else if (selectedJobType && selectedJobType._id)
+      filtered = allJobs.filter((j) => j.jobType._id === selectedJobType._id);
 
     const sortedColumn = _.orderBy(
       filtered,
@@ -63,9 +74,17 @@ class DisplayJobs extends Component {
     const jobs = paginate(sortedColumn, currentPage, pageSize);
     return { filtered, jobs };
   };
+  handleSearch = (query) => {
+    this.setState({
+      searchQuery: query,
+      selectedJobType: null,
+      currentPage: 1,
+    });
+  };
   render() {
     const { length } = this.state.jobs;
     const {
+      searchQuery,
       currentPage,
       pageSize,
       tableHeader,
@@ -91,6 +110,8 @@ class DisplayJobs extends Component {
               <Link className="btn btn-primary" to="/displayJobs/new">
                 New Job
               </Link>
+              <SearchBox value={searchQuery} onChange={this.handleSearch} />
+
               <JobTables
                 jobs={jobs}
                 tableHeader={tableHeader}

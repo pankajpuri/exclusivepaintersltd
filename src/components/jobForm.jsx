@@ -1,10 +1,10 @@
+import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/form";
 import { getJobType } from "../jobs/jobtypesAPI";
 import { getJob, saveJob } from "../jobs/jobs";
 class JobForm extends Form {
   state = {
-    jobTypes: [],
     data: {
       address: "",
       rating: "",
@@ -13,8 +13,21 @@ class JobForm extends Form {
       finishDate: "",
       jobTypeId: "",
     },
+    jobTypes: [],
     errors: {},
   };
+
+  schema = {
+    _id: Joi.string(),
+    address: Joi.string().required().label("Address"),
+    grade: Joi.string().required().label("Grade"),
+    rating: Joi.number().required().min(1).max(5).label("Rating"),
+    startDate: Joi.string(),
+    finishDate: Joi.string(),
+    numberOfDays: Joi.number().required().label("Number of days"),
+    jobTypeId: Joi.string().required().label("Type"),
+  };
+
   componentDidMount() {
     const jobTypes = getJobType();
     this.setState({ jobTypes });
@@ -39,15 +52,7 @@ class JobForm extends Form {
       numberOfDays: job.numberOfDays,
     };
   };
-  schema = {
-    address: Joi.string().required().label("Address"),
-    grade: Joi.number().required().min(1).max(5).label("Grade"),
-    rating: Joi.number().required().min(1).max(5).label("Rating"),
-    startDate: Joi.date(),
-    finishDate: Joi.date(),
-    numberOfDays: Joi.number().required().min(1).label("Number of days"),
-    jobTypeId: Joi.string().required().label("Type"),
-  };
+
   doSubmit = () => {
     //call server
     saveJob(this.state.data);
@@ -56,11 +61,8 @@ class JobForm extends Form {
   };
 
   render() {
-    const { match } = this.props;
-
     return (
       <div>
-        <h1>Jobs:{match.params.id}</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("address", "Address")}
           {this.renderInput("grade", "Grade")}

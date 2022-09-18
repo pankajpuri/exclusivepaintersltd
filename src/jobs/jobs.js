@@ -124,3 +124,8 @@ export function saveJob(job) {
 
   return jobInDb;
 }
+export function deleteMovie(id) {
+  let jobInDb = jobs.find((m) => m._id === id);
+  jobs.splice(jobs.indexOf(jobInDb), 1);
+  return jobInDb;
+}

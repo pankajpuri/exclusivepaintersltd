@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import Like from "./common/like";
 import { Link } from "react-router-dom";
 import Table from "./common/table";
+
 class JobTables extends Component {
   columns = [
     {
       path: "address",
       label: "Address",
-      content: (jobs) => (
-        <Link to={`/displayJobs/${jobs._id}`}>{jobs.address}</Link>
+      content: (job) => (
+        <Link to={`/displayJobs/${job._id}`}>{job.address}</Link>
       ),
     },
     { path: "numberOfDays", label: "Total Days" },
