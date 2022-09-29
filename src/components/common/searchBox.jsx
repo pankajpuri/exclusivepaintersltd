@@ -9,7 +9,8 @@ const SearchBox = ({ value, onChange }) => {
       value={value}
       onChange={(e) => onChange(e.currentTarget.value)}
     />
-  );
+  ); 
+  
 };
 
 export default SearchBox;
