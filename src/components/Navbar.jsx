@@ -4,9 +4,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
-          Exclusive Painters
-        </Link>
+        <NavLink className="navbar-brand" to="/home">
+          <img src="./Images/logo/logo1.png" alt="" style={{ width: "30%" }} />
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"

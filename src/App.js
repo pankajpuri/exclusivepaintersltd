@@ -10,10 +10,11 @@ import NotFound from "./components/notFound";
 import JobForm from "./components/jobForm";
 import LoginForm from "./components/common/loginForm";
 import RegisterForm from "./components/common/registerForm";
+import Home from "./components/home";
 import "./App.css";
 function App() {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Navbar />
       {/* <DisplayJobs /> */}
       <div className="content">
@@ -25,7 +26,8 @@ function App() {
           <Route path="/contract" component={Contract} />
           <Route path="/notFound" component={NotFound} />
           <Route path="/displayJobs" component={DisplayJobs} />
-          <Redirect from="/" exact to="/displayJobs" />
+          <Route path="/home" component={Home} />
+          <Redirect from="/" exact to="/home" />
 
           <Redirect to="/notFound" />
         </Switch>
