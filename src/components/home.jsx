@@ -23,7 +23,7 @@ class Home extends Component {
           <div className="banner_fadeBottom" />
         </section>
         <Products />
-        <Jobcards />
+        {/* <Jobcards /> */}
         <ContactForm />
       </React.Fragment>
     );
