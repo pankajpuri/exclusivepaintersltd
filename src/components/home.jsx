@@ -6,8 +6,14 @@ import ContactForm from "./contactform";
 class Home extends Component {
   render() {
     return (
-      <React.Fragment>
-        <section className="banner container-fluid">
+      <div
+        className="scrollspy-example"
+        data-bs-spy="scroll"
+        data-bs-target="#mainNav"
+        data-bs-offset="0"
+        tabIndex={0}
+      >
+        <section className="banner container-fluid" id="home">
           <div className="banner_contents">
             <h1 className="banner_title">
               Hire Experienced Painters
@@ -25,7 +31,7 @@ class Home extends Component {
         <Products />
         {/* <Jobcards /> */}
         <ContactForm />
-      </React.Fragment>
+      </div>
     );
   }
 }

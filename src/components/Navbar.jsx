@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <React.Fragment>
@@ -60,8 +60,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               className="nav-item nav-link text-uppercase"
-              to="/products"
-              id="#products"
+              to="#products"
             >
               Products
             </NavLink>
