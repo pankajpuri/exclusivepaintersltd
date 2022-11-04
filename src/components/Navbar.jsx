@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <React.Fragment>
@@ -51,55 +52,57 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse nav nav-pills"
-            id="navbarSupportedContent"
-          >
-            <NavLink className="nav-item nav-link text-uppercase" to="/home">
-              Home
-            </NavLink>
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              to="#products"
-            >
-              Products
-            </NavLink>
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              to="/services"
-            >
-              Services
-            </NavLink>
-            <NavLink className="nav-item nav-link text-uppercase" to="/aboutUs">
-              About Us
-            </NavLink>
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              to="/contactForm"
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              aria-current="page"
-              to="/displayJobs"
-            >
-              Jobs
-            </NavLink>
-
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              to="/customers"
-            >
-              Customers
-            </NavLink>
-
-            <NavLink
-              className="nav-item nav-link text-uppercase"
-              to="/contract"
-            >
-              Contracts
-            </NavLink>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link text-uppercase"
+                  activeClassName="active"
+                  to="/home"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/products">
+                  Products
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/services">
+                  Services
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/about">
+                  About Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/contactForm">
+                  Contact
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link text-uppercase"
+                  aria-current="page"
+                  to="/displayJobs"
+                >
+                  Jobs
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/customers">
+                  Customers
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/contract">
+                  Contracts
+                </NavLink>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>

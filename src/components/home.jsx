@@ -2,18 +2,22 @@ import React, { Component } from "react";
 import Products from "./products";
 import Jobcards from "./jobcards";
 import ContactForm from "./contactform";
-
+import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
+import IntroductionSection from "./introductionSection";
+import Footer from "./footer";
 class Home extends Component {
   render() {
     return (
-      <div
-        className="scrollspy-example"
-        data-bs-spy="scroll"
-        data-bs-target="#mainNav"
-        data-bs-offset="0"
-        tabIndex={0}
-      >
-        <section className="banner container-fluid" id="home">
+      <div>
+        <section
+          className="banner container-fluid"
+          id="home"
+          style={{
+            paddingRight: "0",
+            paddingLeft: "0",
+          }}
+        >
           <div className="banner_contents">
             <h1 className="banner_title">
               Hire Experienced Painters
@@ -22,15 +26,19 @@ class Home extends Component {
               <br />
               Complete Solutions
             </h1>
-            <div className="enquireBtn">
-              <button className="enquireBtn btn btn-danger">Enquire Now</button>
-            </div>
+            {/* <div className="enquireBtn">
+              <NavLink className="nav-link"to="/contactform">
+                <button className="enquireBtn btn btn-danger">
+                  Enquire Now
+                </button>
+              </NavLink>
+            </div> */}
           </div>
           <div className="banner_fadeBottom" />
         </section>
+        <IntroductionSection />
         <Products />
         {/* <Jobcards /> */}
-        <ContactForm />
       </div>
     );
   }

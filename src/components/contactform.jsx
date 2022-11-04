@@ -6,7 +6,10 @@ class ContactForm extends Component {
   state = {};
   render() {
     return (
-      <section className="contact-info-area w-padding2 product">
+      <section
+        className="contact-info-area w-padding2 product"
+        id="contactForm"
+      >
         <div className="container">
           <div
             className="row"

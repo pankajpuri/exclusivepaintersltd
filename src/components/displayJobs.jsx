@@ -111,12 +111,6 @@ class DisplayJobs extends Component {
                 New Job
               </Link>
               <SearchBox value={searchQuery} onChange={this.handleSearch} />
-              <input
-                type="search"
-                placeholder="search..."
-                value={this.state.searchQuery}
-                className="form-control"
-              />
 
               <JobTables
                 jobs={jobs}

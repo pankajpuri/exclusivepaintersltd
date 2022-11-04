@@ -15,6 +15,9 @@ import Home from "./components/home";
 import "./App.css";
 import Products from "./components/products";
 import ContactForm from "./components/contactform";
+import Services from "./components/services";
+import About from "./components/about";
+import Footer from "./components/footer";
 function App() {
   return (
     <div className="container-fluid">
@@ -23,6 +26,8 @@ function App() {
       <div>
         <Switch>
           <Route path="/products" component={Products} />
+          <Route path="/aboutd" component={About} />
+          <Route path="/services" component={Services} />
           <Route path="/contactform" component={ContactForm} />
           <Route path="/registerForm" component={RegisterForm} />
           <Route path="/loginForm" component={LoginForm} />
@@ -37,6 +42,7 @@ function App() {
           <Redirect to="/notFound" />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

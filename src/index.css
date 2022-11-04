@@ -223,7 +223,7 @@ textarea {
   flex-direction: column;
   justify-content: flex-end;
   object-fit: contain;
-  height: 500px;
+  min-height: 87vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ textarea {
   font-size: 34px;
   text-align: center;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: white;
   align-content: center;
   padding-bottom: 0.3rem;
@@ -467,6 +467,9 @@ textarea {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: #0bceaf !important;
+}
+.navbar-light .nav-link.active {
+  color: #000 !important;
 }
 .nav-pills .nav-link.active {
   color: #000 !important;
