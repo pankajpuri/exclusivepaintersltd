@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import Products from "./products";
-import Jobcards from "./jobcards";
-import ContactForm from "./contactform";
-import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
 import IntroductionSection from "./introductionSection";
-import Footer from "./footer";
+import Work from "./work";
 class Home extends Component {
   render() {
     return (
@@ -37,6 +33,8 @@ class Home extends Component {
           <div className="banner_fadeBottom" />
         </section>
         <IntroductionSection />
+        <Work />
+
         <Products />
         {/* <Jobcards /> */}
       </div>

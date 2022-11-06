@@ -18,6 +18,7 @@ import ContactForm from "./components/contactform";
 import Services from "./components/services";
 import About from "./components/about";
 import Footer from "./components/footer";
+import "bootstrap/dist/css/bootstrap.css";
 function App() {
   return (
     <div className="container-fluid">
