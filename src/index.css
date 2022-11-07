@@ -92,30 +92,30 @@ textarea {
   color: #9d9d9d;
 }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > NavLink {
   color: #000019;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > NavLink:hover,
+.navbar-inverse .navbar-nav > li > NavLink:focus {
   color: #dc354c !important;
   font-weight: 600;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > NavLink,
+.navbar-inverse .navbar-nav > .active > NavLink:hover,
+.navbar-inverse .navbar-nav > .active > NavLink:focus {
   color: #fff;
 
   background-color: #080808;
 }
 
-.navbar-inverse .navbar-nav > .disabled > a,
-.navbar-inverse .navbar-nav > .disabled > a:hover,
-.navbar-inverse .navbar-nav > .disabled > a:focus {
+.navbar-inverse .navbar-nav > .disabled > NavLink,
+.navbar-inverse .navbar-nav > .disabled > NavLink:hover,
+.navbar-inverse .navbar-nav > .disabled > NavLink:focus {
   color: #444;
   background-color: transparent;
 }

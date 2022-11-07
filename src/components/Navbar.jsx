@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 class Navbar extends Component {
   state = {};
-  myFunction = () => {
-    var element = document.getElementById("navbarSupportedContent");
-    element.classList.toggle("show");
-  };
-  removeClassShow = () => {
-    var element = document.getElementById("navbarSupportedContent");
-    element.remove("show");
-  };
+  // myFunction = () => {
+  //   var element = document.getElementById("navbarSupportedContent");
+  //   element.classList.toggle("show");
+  // };
+  // removeClassShow = () => {
+  //   var element = document.getElementById("navbarSupportedContent");
+  //   element.remove("show");
+  // };
   render() {
     return (
       <React.Fragment>
@@ -39,7 +39,6 @@ class Navbar extends Component {
         <nav
           id="mainNav"
           className="navbar navbar-expand-lg navbar-light bg-light sticky-top nav-tab"
-          role="tablist"
           style={{ paddingTop: "0px", paddingBottom: "0px" }}
         >
           <div className="container-fluid">
@@ -51,14 +50,13 @@ class Navbar extends Component {
               />
             </NavLink>
             <button
-              className="navbar-toggler"
+              className="navbar-toggler "
               type="button"
-              // data-bs-toggle="collapse"
-              // data-bs-target="#navbarSupportedContent"
-              // aria-controls="navbarSupportedContent"
-              // aria-expanded="false"
-              // aria-label="Toggle navigation"
-              onClick={this.myFunction}
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -71,43 +69,29 @@ class Navbar extends Component {
                   <NavLink
                     className="nav-link text-uppercase"
                     activeClassName="active"
-                    onClick={this.removeClassShow}
                     to="/home"
                   >
                     Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
-                    to="/products"
-                  >
+                  <NavLink className="nav-link text-uppercase" to="/products">
                     Products
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
-                    to="/services"
-                  >
+                  <NavLink className="nav-link text-uppercase" to="/services">
                     Services
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
-                    to="/about"
-                  >
+                  <NavLink className="nav-link text-uppercase" to="/about">
                     About Us
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
                     to="/contactForm"
                   >
                     Contact
@@ -117,27 +101,18 @@ class Navbar extends Component {
                   <NavLink
                     className="nav-link text-uppercase"
                     aria-current="page"
-                    onClick={this.removeClassShow}
                     to="/displayJobs"
                   >
                     Jobs
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
-                    to="/customers"
-                  >
+                  <NavLink className="nav-link text-uppercase" to="/customers">
                     Customers
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link text-uppercase"
-                    onClick={this.removeClassShow}
-                    to="/contract"
-                  >
+                  <NavLink className="nav-link text-uppercase" to="/contract">
                     Contracts
                   </NavLink>
                 </li>
