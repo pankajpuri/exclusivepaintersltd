@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Products from "./products";
 import IntroductionSection from "./introductionSection";
 import Work from "./work";
+import Reviews from "./reviews";
 class Home extends Component {
   render() {
     return (
@@ -34,7 +35,7 @@ class Home extends Component {
         </section>
         <IntroductionSection />
         <Work />
-
+        <Reviews />
         <Products />
         {/* <Jobcards /> */}
       </div>

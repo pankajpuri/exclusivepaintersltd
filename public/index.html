@@ -31,13 +31,20 @@
     -->
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-     
+ 
+  <!-- DO NOT FORGET TO SET YOUR OWN API KEY!  -->
+  <!-- Create an API key: -->
+  <!-- https://console.developers.google.com/apis/library/places-backend.googleapis.com/?q=places -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBzLWAarnC5b1j40Pl103km3M39P_3dbMY"></script>
+
+
+  
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
     
     <!--
       This HTML file is a template.
@@ -52,37 +59,57 @@
      <!-- Option 1: Bootstrap Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
      <!-- add this before </body> -->
-<script>
-  // Find a placeID via https://developers.google.com/places/place-id
-          googlePlaces("google-reviews", {
-            placeId: 'AIzaSyBzLWAarnC5b1j40Pl103km3M39P_3dbMY',
-            // the following params are optional (default values)
-            header: "<h3>Google Reviews</h3>", // html/text over Reviews
-            footer: '', // html/text under Reviews block
-            maxRows: 6, // max rows of reviews to be displayed
-            minRating: 4, // minimum rating of reviews to be displayed
-            months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
-            textBreakLength: "90", // length before a review box is set to max width
-            showDate: false, // renders the date of the review before the review itself
-            shortenNames: true, // example: "Max Mustermann" -> "Max M.""
-            replaceAnonymous: false, // do not replace anonymous author_name from JSON
-            anonymousName: "A Google User", // Google's default value depending on language used (en: "A Google User")
-            anonymousNameReplacement: "User chose to remain anonymous", // replacement for default (never shortens)
-          });
+     
+     <script>
       
-</script>
+      // $(document).ready(function() {
+  
+      //   $("#google-reviews").googlePlaces({
+      //       placeId: 'ChIJySgVASFHDW0RUU63nGKKMwc'
+      //     , render: ['reviews','address','phone']
+      //     , min_rating: 4
+      //     , max_rows:5
+      //     , shorten_names: false
+      //     , schema:{
+      //           displayElement: "#schema"
+      //         , type: 'Hostel'
+      //         , beforeText: 'Google Users Have Rated'
+      //         , middleText: 'based on'
+      //         , afterText: 'ratings and reviews'
+      //         , image: 'https://via.placeholder.com/150'
+      //         , priceRange: '$$'
+      //       }
+      //     , address:{
+      //         displayElement: "#custom-address-id"
+      //       }
+      //   });
+  
+      // });
+  
+  
+  
+    //    // Find a placeID via https://developers.google.com/places/place-id
+    //    googlePlaces("google-reviews", {
+    //   placeId: 'ChIJySgVASFHDW0RUU63nGKKMwc',
+    //   // the following params are optional (default values)
+    //   header: "<h3>Google Reviews</h3>", // html/text over Reviews
+    //   footer: '', // html/text under Reviews block
+    //   maxRows: 6, // max rows of reviews to be displayed
+    //   minRating: 4, // minimum rating of reviews to be displayed
+    //   months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+    //   textBreakLength: "90", // length before a review box is set to max width
+    //   showDate: false, // renders the date of the review before the review itself
+    //   shortenNames: true, // example: "Max Mustermann" -> "Max M.""
+    //   replaceAnonymous: false, // do not replace anonymous author_name from JSON
+    //   anonymousName: "A Google User", // Google's default value depending on language used (en: "A Google User")
+    //   anonymousNameReplacement: "User chose to remain anonymous", // replacement for default (never shortens)
+    // });
+    </script>
      
   </body>
-
+  
 </html>
-<script>
-  $(document).ready(function () {
-    console.log("Hello hello")
-    $('ul li NavLink').click(function () {
-      $('#mainNav #navbarSupportedContent').removeClass('show');
-    });
-  });
-</script>
+
 <!-- <script>
   var scrollSpy = new bootstrap.ScrollSpy(document.body, {
   target: '#mainNav'

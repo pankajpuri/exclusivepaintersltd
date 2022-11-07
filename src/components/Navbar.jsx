@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 class Navbar extends Component {
   state = {};
-  myFunction = (e) => {
-    e.preventDefault();
+  myFunction = () => {
     var element = document.getElementById("navbarSupportedContent");
     element.classList.toggle("show");
   };
-  removeClassShow = (e) => {
-    e.preventDefault();
+  removeClassShow = () => {
     var element = document.getElementById("navbarSupportedContent");
     element.remove("show");
   };
@@ -73,7 +71,7 @@ class Navbar extends Component {
                   <NavLink
                     className="nav-link text-uppercase"
                     activeClassName="active"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/home"
                   >
                     Home
@@ -82,7 +80,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/products"
                   >
                     Products
@@ -91,7 +89,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/services"
                   >
                     Services
@@ -100,7 +98,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/about"
                   >
                     About Us
@@ -109,7 +107,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/contactForm"
                   >
                     Contact
@@ -119,7 +117,7 @@ class Navbar extends Component {
                   <NavLink
                     className="nav-link text-uppercase"
                     aria-current="page"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/displayJobs"
                   >
                     Jobs
@@ -128,7 +126,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/customers"
                   >
                     Customers
@@ -137,7 +135,7 @@ class Navbar extends Component {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
-                    onClick="removeClassShow()"
+                    onClick={this.removeClassShow}
                     to="/contract"
                   >
                     Contracts
