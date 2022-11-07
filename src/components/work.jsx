@@ -8,7 +8,7 @@ const Work = () => {
 
           <div
             id="carouselExampleControls"
-            className="carousel  carousel-fade"
+            className="carousel  slide"
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
