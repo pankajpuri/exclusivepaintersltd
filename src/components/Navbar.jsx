@@ -50,7 +50,7 @@ class Navbar extends Component {
               />
             </NavLink>
             <button
-              className="navbar-toggler "
+              className="navbar-toggler tg"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"

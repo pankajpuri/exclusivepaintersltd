@@ -35,7 +35,7 @@ class Home extends Component {
         </section>
         <IntroductionSection />
         <Work />
-        <Reviews />
+        {/* <Reviews /> */}
         <Products />
         {/* <Jobcards /> */}
       </div>

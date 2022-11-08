@@ -4,9 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel";
 // import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.js";
-// import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import "bootstrap/dist/js/bootstrap";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
