@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import getJobDatas from "./datas/jobDatas";
+import Fade from "react-reveal/Fade";
 class Work extends Component {
   state = { datas: getJobDatas() };
 
@@ -10,20 +11,22 @@ class Work extends Component {
           <h1 className="text-center">
             <b>Our Projects</b>
           </h1>
-          <div className="slider">
-            <div className="owl-carousel">
-              {this.state.datas.map((data) => (
-                <div className="slider-card mb-3" key={data.id}>
-                  <div
-                    key={data.id}
-                    className="d-flex justify-content-center align-items-center mb-4"
-                  >
-                    <img src={data.intSource} alt="" />
+          <Fade bottom>
+            <div className="slider">
+              <div className="owl-carousel">
+                {this.state.datas.map((data) => (
+                  <div className="slider-card mb-3" key={data.id}>
+                    <div
+                      key={data.id}
+                      className="d-flex justify-content-center align-items-center mb-4"
+                    >
+                      <img src={data.intSource} alt="" />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </Fade>
         </div>
       </section>
     );

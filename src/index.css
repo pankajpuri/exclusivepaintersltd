@@ -123,7 +123,7 @@ textarea {
 .product {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("../public/Images/section/section_bg02.jpg");
+  background-image: url("../public/assests/images/section/section_bg02.jpg");
 }
 
 .product_title {
@@ -215,7 +215,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("../public/Images/banners/5.jpg");
+  background-image: url("../public/assests/images/banners/5.jpg");
 }
 
 .banner {
@@ -227,7 +227,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("../public/Images/banners/8.jpg");
+  background-image: url("../public/assests/images/banners/8.jpg");
 }
 
 .banner_contents {
@@ -332,7 +332,7 @@ textarea {
 }
 
 .contact-info-area {
-  background-image: url("../public/Images/section/section_bg04.jpg");
+  background-image: url("../public/assests/images/section/section_bg04.jpg");
 }
 
 .contact-info-area h3 {

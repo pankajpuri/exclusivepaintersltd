@@ -1,47 +1,47 @@
 export const jobDatas = [
   {
     id: "1ourproject",
-    intSource: "../Images/introductions/1.jpeg",
+    intSource: "../assests/images/introductions/1.jpeg",
   },
   {
     id: "2ourproject",
-    intSource: "../Images/introductions/2.jpeg",
+    intSource: "../assests/images/introductions/2.jpeg",
   },
   {
     id: "3ourproject",
-    intSource: "../Images/introductions/3.jpeg",
+    intSource: "../assests/images/introductions/3.jpeg",
   },
   {
     id: "4ourproject",
-    intSource: "../Images/introductions/4.jpeg",
+    intSource: "../assests/images/introductions/4.jpeg",
   },
   {
     id: "5ourproject",
-    intSource: "../Images/introductions/5.jpeg",
+    intSource: "../assests/images/introductions/5.jpeg",
   },
   {
     id: "6ourproject",
-    intSource: "../Images/introductions/11.jpeg",
+    intSource: "../assests/images/introductions/11.jpeg",
   },
   {
     id: "7ourproject",
-    intSource: "../Images/introductions/22.jpeg",
+    intSource: "../assests/images/introductions/22.jpeg",
   },
   {
     id: "8ourproject",
-    intSource: "../Images/introductions/33.jpeg",
+    intSource: "../assests/images/introductions/33.jpeg",
   },
   {
     id: "9ourproject",
-    intSource: "../Images/introductions/44.jpeg",
+    intSource: "../assests/images/introductions/44.jpeg",
   },
   {
     id: "10ourproject",
-    intSource: "../Images/introductions/55.jpeg",
+    intSource: "../assests/images/introductions/55.jpeg",
   },
   {
     id: "11ourproject",
-    intSource: "../Images/introductions/66.jpeg",
+    intSource: "../assests/images/introductions/66.jpeg",
   },
 
   // {

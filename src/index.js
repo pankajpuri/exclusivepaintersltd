@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import "./customScript/customscript.js";
+
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
 // import "bootstrap/dist/css/bootstrap.css";

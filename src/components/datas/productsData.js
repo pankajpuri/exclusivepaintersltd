@@ -1,10 +1,28 @@
 export const productList = [
-  { id: "1exproduct", imagesource: "../Images/paintingbrand/resene.jpg" },
-  { id: "2exproduct", imagesource: "../Images/paintingbrand/dulux.jpg" },
-  { id: "3exproduct", imagesource: "../Images/paintingbrand/aalto.jpg" },
-  { id: "4exproduct", imagesource: "../Images/paintingbrand/porters.jpg" },
-  { id: "5exproduct", imagesource: "../Images/paintingbrand/sikkens.jpg" },
-  { id: "6exproduct", imagesource: "../Images/paintingbrand/wattyl.jpg" },
+  {
+    id: "1exproduct",
+    imagesource: "../assests/images/paintingbrand/resene.jpg",
+  },
+  {
+    id: "2exproduct",
+    imagesource: "../assests/images/paintingbrand/dulux.jpg",
+  },
+  {
+    id: "3exproduct",
+    imagesource: "../assests/images/paintingbrand/aalto.jpg",
+  },
+  {
+    id: "4exproduct",
+    imagesource: "../assests/images/paintingbrand/porters.jpg",
+  },
+  {
+    id: "5exproduct",
+    imagesource: "../assests/images/paintingbrand/sikkens.jpg",
+  },
+  {
+    id: "6exproduct",
+    imagesource: "../assests/images/paintingbrand/wattyl.jpg",
+  },
 ];
 
 export default function getImageSource() {
