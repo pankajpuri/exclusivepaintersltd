@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import getImageSource from "./datas/productsData";
 import Fade from "react-reveal/Fade";
 class Products extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     imagesource: getImageSource(),
   };

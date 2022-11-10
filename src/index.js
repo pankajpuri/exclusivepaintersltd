@@ -8,8 +8,8 @@ import "./customScript/customscript.js";
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

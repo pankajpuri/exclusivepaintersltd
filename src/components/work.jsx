@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import getJobDatas from "./datas/jobDatas";
 import Fade from "react-reveal/Fade";
 class Work extends Component {
-  state = { datas: getJobDatas() };
+  state = { datas: [] };
+  componentDidMount() {
+    const datas = getJobDatas();
+    this.setState({ datas });
+  }
 
   render() {
     return (

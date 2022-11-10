@@ -1,7 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 const IntroductionSection = () => {
-  const imagesrc = "../assests/images/introductions/intro.jpeg";
   return (
     <section className="container-fluid">
       <div className="conatiner mb-5 mt-5">
@@ -16,7 +15,7 @@ const IntroductionSection = () => {
           <div className="col-lg-7 col-md-7 col-sm-7">
             <Fade bottom>
               <img
-                src={imagesrc}
+                src="../assests/images/introductions/intro.jpeg"
                 alt=""
                 style={{
                   objectFit: "contain",
