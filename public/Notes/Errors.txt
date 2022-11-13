@@ -1,4 +1,13 @@
 1. react-dom.development.js:86 Warning: A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components
     at input
 
-2. Uncaught SyntaxError: Unexpected token '<' (at owl.carousel.min.js:1:1)    
+2. Uncaught SyntaxError: Unexpected token '<' (at owl.carousel.min.js:1:1) 
+    solution: remove <script >carousel </script>and<script> bootstrap</script>
+    
+3.GET https://main.d1x7tfsl40h6kh.amplifyapp.com/node_modules/owl.carousel/dist/assets/owl.carousel.min.css net::ERR_ABORTED 404
+    Images/logo/logo1.png:1          
+    GET https://main.d1x7tfsl40h6kh.amplifyapp.com/Images/logo/logo1.png 404
+
+    solution : add images extsion like this 1.jpeg 
+    then add jpeg in aws setting rewites and follow as:
+    </^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|jpeg|txt|svg|woff|ttf|map|json)$)([^.]+$)/>	

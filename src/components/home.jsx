@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Products from "./products";
 import IntroductionSection from "./introductionSection";
-import Work from "./project";
+import Reviews from "./reviews";
+import Projects from "./project";
 class Home extends Component {
   render() {
     return (
@@ -36,9 +37,8 @@ class Home extends Component {
         </section>
 
         <IntroductionSection />
-
-        <Work />
-        {/* <Reviews /> */}
+        <Projects />
+        <Reviews />
         <Products />
         {/* <Jobcards /> */}
       </div>

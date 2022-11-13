@@ -4,12 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
 import "bootstrap/dist/css/bootstrap.css";
 import "jquery/dist/jquery.js";
+import "bootstrap/dist/js/bootstrap.js";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel";
+import "google-maps-reviews/google-maps-reviews.js";
+import "google-maps-reviews/google-maps-reviews.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <BrowserRouter>
     <App />
