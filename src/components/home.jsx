@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Products from "./products";
 import IntroductionSection from "./introductionSection";
 import Work from "./project";
-import Reviews from "./reviews";
-import Fade from "react-reveal/Fade";
 class Home extends Component {
   render() {
     return (
@@ -17,15 +15,14 @@ class Home extends Component {
           }}
         >
           <div className="banner_contents">
-            <Fade bottom>
-              <h1 className="banner_title">
-                Hire Experienced Painters
-                <br />
-                for the
-                <br />
-                Complete Solutions
-              </h1>
-            </Fade>
+            <h1 className="banner_title">
+              Hire Experienced Painters
+              <br />
+              for the
+              <br />
+              Complete Solutions
+            </h1>
+
             {/* <div className="enquireBtn">
               <NavLink className="nav-link"to="/contactform">
                 <button className="enquireBtn btn btn-danger">

@@ -13,7 +13,7 @@ export const jobDatas = [
   },
   {
     id: "4ourproject",
-    intSource: "/assests/images/introductions/4.jpeg",
+    intSource: "/images/introductions/4.jpeg",
   },
   {
     id: "5ourproject",
@@ -21,7 +21,7 @@ export const jobDatas = [
   },
   {
     id: "6ourproject",
-    intSource: "/assests/images/introductions/11.jpeg",
+    intSource: "/images/introductions/11.jpeg",
   },
   {
     id: "7ourproject",
@@ -37,7 +37,7 @@ export const jobDatas = [
   },
   {
     id: "10ourproject",
-    intSource: "/assests/images/introductions/55.jpeg",
+    intSource: "/images/introductions/55.jpeg",
   },
   {
     id: "11ourproject",

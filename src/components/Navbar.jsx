@@ -2,14 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 class Navbar extends Component {
   state = {};
-  // myFunction = () => {
-  //   var element = document.getElementById("navbarSupportedContent");
-  //   element.classList.toggle("show");
-  // };
-  // removeClassShow = () => {
-  //   var element = document.getElementById("navbarSupportedContent");
-  //   element.remove("show");
-  // };
+
   render() {
     return (
       <React.Fragment>

@@ -1,27 +1,27 @@
 export const productList = [
   {
     id: "1exproduct",
-    imagesource: "../assests/images/paintingbrand/resene.jpg",
+    imagesource: "/images/paintingbrand/resene.jpg",
   },
   {
     id: "2exproduct",
-    imagesource: "../assests/images/paintingbrand/dulux.jpg",
+    imagesource: "/images/paintingbrand/dulux.jpg",
   },
   {
     id: "3exproduct",
-    imagesource: "../assests/images/paintingbrand/aalto.jpg",
+    imagesource: "/images/paintingbrand/aalto.jpg",
   },
   {
     id: "4exproduct",
-    imagesource: "../assests/images/paintingbrand/porters.jpg",
+    imagesource: "/images/paintingbrand/porters.jpg",
   },
   {
     id: "5exproduct",
-    imagesource: "../assests/images/paintingbrand/sikkens.jpg",
+    imagesource: "/images/paintingbrand/sikkens.jpg",
   },
   {
     id: "6exproduct",
-    imagesource: "../assests/images/paintingbrand/wattyl.jpg",
+    imagesource: "/images/paintingbrand/wattyl.jpg",
   },
 ];
 
