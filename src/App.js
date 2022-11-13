@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "font-awesome/css/font-awesome.css";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { React } from "react";
 import Cusomters from "./components/customers";
 import Contract from "./components/contract";
 import Navbar from "./components/Navbar";
@@ -19,6 +18,8 @@ import Services from "./components/services";
 import About from "./components/about";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
+
 function App() {
   return (
     <div className="container-fluid">

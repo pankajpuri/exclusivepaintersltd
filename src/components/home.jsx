@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Products from "./products";
 import IntroductionSection from "./introductionSection";
-import Work from "./work";
+import Work from "./project";
 import Reviews from "./reviews";
 import Fade from "react-reveal/Fade";
 class Home extends Component {

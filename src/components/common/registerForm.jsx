@@ -1,3 +1,4 @@
+import React from "react";
 import Form from "./form";
 import Joi from "joi-browser";
 class RegisterForm extends Form {
@@ -6,9 +7,18 @@ class RegisterForm extends Form {
     errors: {},
   };
   schema = {
-    username: Joi.string().required().email().label("Username"),
-    password: Joi.string().required().min(5).label("Password"),
-    name: Joi.string().required().min(2).label("Name"),
+    username: Joi.string()
+      .required()
+      .email()
+      .label("Username"),
+    password: Joi.string()
+      .required()
+      .min(5)
+      .label("Password"),
+    name: Joi.string()
+      .required()
+      .min(2)
+      .label("Name"),
   };
   doSubmit = () => {
     //call server

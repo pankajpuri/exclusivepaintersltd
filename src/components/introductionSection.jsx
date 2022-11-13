@@ -15,7 +15,7 @@ const IntroductionSection = () => {
           <div className="col-lg-7 col-md-7 col-sm-7">
             <Fade bottom>
               <img
-                src="../assests/images/introductions/intro.jpeg"
+                src="../images/introductions/intro.jpeg"
                 alt=""
                 style={{
                   objectFit: "contain",

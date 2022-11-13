@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import getJobDatas from "./datas/jobDatas";
 import Fade from "react-reveal/Fade";
-class Work extends Component {
+class Projects extends Component {
   state = { datas: [] };
   componentDidMount() {
     const datas = getJobDatas();
@@ -37,4 +37,4 @@ class Work extends Component {
   }
 }
 
-export default Work;
+export default Projects;
