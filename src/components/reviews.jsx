@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import "jquery/dist/jquery.js";
+import "google-maps-reviews/google-maps-reviews.js";
+import "google-maps-reviews/google-maps-reviews.css";
+// import renderReviews from "google-maps-reviews/google-maps-reviews.js";
+// import googlePlaces from "google-maps-reviews/google-maps-reviews.js";
 class Reviews extends Component {
-  constructor(props) {
-    super(props);
-  }
-  state = {};
+  state = {
+    reviews: "",
+  };
 
   render() {
     return (

@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 class About extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {};
   render() {
-    return <h1>About</h1>;
+    return (
+      <section className="product" id="About">
+        <div className="container">
+          <div className="row product-marginbtm50">
+            <h3 className="product_title">About us</h3>
+            <p>Coming soon!</p>
+          </div>
+        </div>
+      </section>
+    );
   }
 }
 

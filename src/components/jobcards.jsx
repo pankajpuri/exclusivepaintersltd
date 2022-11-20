@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import getJobDatas, { jobDatas } from "./datas/jobDatas";
 class Jobcards extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     jobDatas: getJobDatas(),
   };

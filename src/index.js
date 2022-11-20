@@ -9,8 +9,6 @@ import "jquery/dist/jquery.js";
 import "bootstrap/dist/js/bootstrap.js";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
-import "google-maps-reviews/google-maps-reviews.js";
-import "google-maps-reviews/google-maps-reviews.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

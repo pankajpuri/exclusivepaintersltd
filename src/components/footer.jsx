@@ -26,7 +26,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a style={{ display: "flex", alingItems: "baseline" }}>
+                <a href="#" style={{ display: "flex", alingItems: "baseline" }}>
                   <i className="fa fa-map-marker me-2" aria-hidden="true" />
                   <p>
                     1/411 Blockhouse Bay Road, Blockhouse Bay, Auckland 0600

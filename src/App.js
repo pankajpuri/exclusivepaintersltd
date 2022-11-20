@@ -17,35 +17,62 @@ import ContactForm from "./components/contactform";
 import Services from "./components/services";
 import About from "./components/about";
 import Footer from "./components/footer";
-import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
+import React, { useEffect } from "react";
 
 function App() {
+  // useEffect(() => {
+  //   $(".owl-carousel").OwlCarousel({
+  //     loop: true,
+  //     margin: 10,
+  //     nav: true,
+  //     autoplay: true,
+  //     autoplayTimeout: 3000,
+  //     autoplayHoverPause: true,
+  //     center: true,
+  //     // navText: [
+  //     //   "<i class='fa fa-angle-left'></i>",
+  //     //   "<i class='fa fa-angle-right'></i>",
+  //     // ],
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       600: {
+  //         items: 1,
+  //       },
+  //       1000: {
+  //         items: 3,
+  //       },
+  //     },
+  //   });
+  // });
   return (
-    <div className="container-fluid">
-      <Navbar />
-      {/* <DisplayJobs /> */}
-      <div>
-        <Switch>
-          <Route path="/products" component={Products} />
-          <Route path="/aboutd" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contactform" component={ContactForm} />
-          <Route path="/registerForm" component={RegisterForm} />
-          <Route path="/loginForm" component={LoginForm} />
-          <Route path="/displayJobs/:id" component={JobForm} />
-          <Route path="/customers" component={Cusomters} />
-          <Route path="/contract" component={Contract} />
-          <Route path="/notFound" component={NotFound} />
-          <Route path="/displayJobs" component={DisplayJobs} />
-          <Route path="/home" component={Home} />
-          <Redirect from="/" exact to="/home" />
+    <React.Fragment>
+      <div className="container-fluid">
+        <Navbar />
+        {/* <DisplayJobs /> */}
+        <div>
+          <Switch>
+            <Route path="/products" component={Products} />
+            <Route path="/aboutd" component={About} />
+            <Route path="/services" component={Services} />
+            <Route path="/contactform" component={ContactForm} />
+            <Route path="/registerForm" component={RegisterForm} />
+            <Route path="/loginForm" component={LoginForm} />
+            <Route path="/displayJobs/:id" component={JobForm} />
+            <Route path="/customers" component={Cusomters} />
+            <Route path="/contract" component={Contract} />
+            <Route path="/displayJobs" component={DisplayJobs} />
+            <Route path="/notFound" component={NotFound} />
+            <Route path="/home" component={Home} />
+            <Redirect from="/" exact to="/home" />
 
-          <Redirect to="/notFound" />
-        </Switch>
+            <Redirect to="/notFound" />
+          </Switch>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </React.Fragment>
   );
 }
 

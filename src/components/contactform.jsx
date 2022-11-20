@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {};
   render() {
     return (

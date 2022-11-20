@@ -27,6 +27,7 @@
     <!-- load the plugin/script -->
 
     <!-- https://console.developers.google.com/apis/library/places-backend.googleapis.com/?q=places -->
+
     <title>React App</title>
   </head>
 
@@ -47,17 +48,25 @@
    })
    </script> -->
 
-    <script>
+    <script type="text/javascript">
+      // var list = [];
+      // list.push.googlePlaces({
+      //   placeId: "ChIJySgVASFHDW0RUU63nGKKMwc", //Find placeID @: https://developers.google.com/places/place-id
+      //   render: ["reviews"],
+      // });
+      // console.log(list.map((data) => data));
       jQuery(document).ready(function($) {
         $("#google-reviews").googlePlaces({
           placeId: "ChIJySgVASFHDW0RUU63nGKKMwc", //Find placeID @: https://developers.google.com/places/place-id
           render: ["reviews"],
           min_rating: 4,
-          max_rows: 4,
+          max_rows: 2,
+          rotateTime: false,
         });
       });
     </script>
     <script type="text/javascript">
+      console.log("Carousel function is called");
       $(document).ready(function() {
         $(".owl-carousel").owlCarousel({
           loop: true,
@@ -91,5 +100,20 @@
         $(".collapse").collapse("hide");
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("ul li").click(function(e) {
+          location.href = $(this)
+            .children("a")
+            .attr("href");
+          // window.location.reload(true);
+        });
+      });
+    </script>
   </body>
 </html>
+<!-- import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
+import "owl.carousel/dist/owl.carousel.js";
+import "owl.carousel/dist/owl.carousel.min.js";
+import "owl.carousel"; -->
