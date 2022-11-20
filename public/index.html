@@ -13,16 +13,14 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css"
-    />
+    /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/stevenmonson/googleReviews@6e8f0d794393ec657dab69eb1421f3a60add23ef/google-places.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBzLWAarnC5b1j40Pl103km3M39P_3dbMY&libraries=places"></script>
-
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBzLWAarnC5b1j40Pl103km3M39P_3dbMY"></script> -->
 
     <!-- load the plugin/script -->
 
@@ -56,13 +54,31 @@
       // });
       // console.log(list.map((data) => data));
       jQuery(document).ready(function($) {
+        var datas = [];
+
+        // $("#google-reviews").googlePlaces({
         $("#google-reviews").googlePlaces({
           placeId: "ChIJySgVASFHDW0RUU63nGKKMwc", //Find placeID @: https://developers.google.com/places/place-id
           render: ["reviews"],
-          min_rating: 4,
-          max_rows: 2,
-          rotateTime: false,
+          min_rating: 0,
+          max_row: 0,
+          rotateTime: 5000,
+          months: [
+            "Jan",
+            "Feb",
+            "Mär",
+            "Apr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dez",
+          ],
         });
+        console.log("#google-reivews", this.object);
       });
     </script>
     <script type="text/javascript">
@@ -112,8 +128,3 @@
     </script>
   </body>
 </html>
-<!-- import $ from "jquery";
-import "jquery-ui-dist/jquery-ui";
-import "owl.carousel/dist/owl.carousel.js";
-import "owl.carousel/dist/owl.carousel.min.js";
-import "owl.carousel"; -->
