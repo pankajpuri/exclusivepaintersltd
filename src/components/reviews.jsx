@@ -18,7 +18,7 @@ class Reviews extends Component {
       >
         <div className="container mb-5 mt-5">
           <div className="row">
-            <h1 className="pb-4 text-center text-decoration-line">Reviews</h1>
+            <h1 className="pb-4 text-center section-heading">Reviews</h1>
             <div className="d-flex justify-content-center">
               <div className="col-lg-6">
                 <div
