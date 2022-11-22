@@ -52,8 +52,9 @@ class Home extends Component {
 
         <IntroductionSection />
         <Projects datas={this.state.datas} />
-        <Reviews />
+
         <Products />
+        <Reviews />
         {/* <Jobcards /> */}
       </div>
     );

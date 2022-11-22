@@ -4,7 +4,7 @@ const Projects = ({ datas }) => {
   return (
     <section id="slider" className="container-fluid mb-5 mt-5 pt-5">
       <div className="row">
-        <h1 className="text-center">
+        <h1 className="text-center pb-4">
           <b>Our Projects</b>
         </h1>
 

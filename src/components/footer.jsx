@@ -2,7 +2,7 @@ import React from "react";
 const Footer = () => {
   return (
     <section id="footer" className="container-fuild">
-      <div className="container">
+      <div className="container p-2">
         <div className="row mt-5" style={{ color: "#0bceaf " }}>
           <div
             className="col-lg-4"
