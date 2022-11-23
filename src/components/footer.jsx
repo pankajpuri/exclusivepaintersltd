@@ -3,42 +3,38 @@ const Footer = () => {
   return (
     <section id="footer" className="container-fuild">
       <div className="container p-2">
-        <div className="row mt-5" style={{ color: "#0bceaf " }}>
+        <div className="row mt-5">
           <div
-            className="col-lg-4"
-            style={{ display: "flex", flexDirection: "column" }}
+            className="col-lg"
+            // style={{ display: "flex", flexDirection: "column" }}
           >
             <h4 className="ms-5">Contact Us</h4>
-            <ul style={{ listStyle: "none" }}>
+            <ul>
               <li>
-                <a href="tel:+64225276078" style={{ color: "#0bceaf " }}>
+                <a href="tel:+64225276078">
                   <i className="fa fa-phone me-2" aria-hidden="true" />
                   022 527 6078
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:exclusivepaintersltd@gmail.com"
-                  style={{ color: "#0bceaf" }}
-                >
+                <a href="mailto:exclusivepaintersltd@gmail.com">
                   <i className="fa fa-envelope me-2" aria-hidden="true" />
                   exclusivepaintersltd@gmail.com
                 </a>
               </li>
               <li>
-                <a href="#" style={{ display: "flex", alingItems: "baseline" }}>
+                <a className="address-marker" href="#">
                   <i className="fa fa-map-marker me-2" aria-hidden="true" />
                   <p>
                     1/411 Blockhouse Bay Road, Blockhouse Bay, Auckland 0600
                   </p>
                 </a>
               </li>
-              <li></li>
             </ul>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg">
             <h4 className="ms-4">Follow Us</h4>
-            <ul style={{ listStyle: "none", display: "flex" }}>
+            <ul className="social-media">
               <li>
                 <i className="fa fa-facebook-square" aria-hidden="true"></i>
               </li>
@@ -47,8 +43,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg">
             <ul
+              className="footer-menu"
               style={{
                 listStyle: "none",
                 textDecorationLine: "underline",

@@ -16,7 +16,7 @@ class Reviews extends Component {
         className="container-fluid"
         style={{ height: "100vh!important" }}
       >
-        <div className="container mb-5 mt-5">
+        <div className="container">
           <div className="row">
             <h1 className="pb-4 text-center section-heading">Reviews</h1>
             <div className="d-flex justify-content-center">
