@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import "jquery/dist/jquery.js";
 import "google-maps-reviews/google-maps-reviews.js";
 import "google-maps-reviews/google-maps-reviews.css";
+import googlePlaces from "google-maps-reviews/google-maps-reviews.js";
 // import renderReviews from "google-maps-reviews/google-maps-reviews.js";
 // import googlePlaces from "google-maps-reviews/google-maps-reviews.js";
 class Reviews extends Component {
   state = {
-    reviews: "",
+    reviews: [],
   };
 
   render() {
@@ -16,6 +17,7 @@ class Reviews extends Component {
         className="container-fluid"
         style={{ height: "100vh!important" }}
       >
+        import Reviews from './reviews';
         <div className="container">
           <div className="row">
             <h1 className="pb-4 text-center section-heading">Reviews</h1>

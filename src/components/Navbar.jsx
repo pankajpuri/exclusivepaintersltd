@@ -37,7 +37,7 @@ class Navbar extends Component {
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/home">
               <img
-                src="./Images/logo/logo1.png"
+                src="/images/logo/logo1.png"
                 alt=""
                 style={{ width: "30%" }}
               />
