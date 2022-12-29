@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import getServiceData, { serviceData } from "./datas/serviceData";
 class Services extends Component {
   state = {
-    datas: getServiceData(),
-    length: serviceData.length,
-    counter: 0,
+    datas: [],
   };
-
+  componentDidMount() {
+    const datas = getServiceData();
+    this.setState({ datas });
+  }
   render() {
     return (
       <section id="services">
