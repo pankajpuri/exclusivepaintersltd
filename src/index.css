@@ -800,3 +800,48 @@ grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
   }
 }
 /* End of style - introduction section */
+
+/* Start of Service setion*/
+@media (max-width: 991.98px) {
+  .serviceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.serviceparagraph {
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 400;
+  font-size: larger;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+}
+.serviceCard p {
+  justify-content: center;
+  font-weight: 400;
+  font-size: larger;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+}
+.aboutParagraph {
+  justify-content: center;
+  font-weight: 400;
+  font-size: larger;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+  text-align: justify;
+}
+.about_title {
+  display: flex;
+  justify-content: center;
+  color: #000019;
+  border-bottom: 2px solid#000000;
+  margin-bottom: 50px;
+  margin-top: 28px !important;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+/* End of Service setion*/

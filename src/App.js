@@ -54,7 +54,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/products" component={Products} />
-            <Route path="/aboutd" component={About} />
+            <Route path="/about" component={About} />
             <Route path="/services" component={Services} />
             <Route path="/contactform" component={ContactForm} />
             <Route path="/registerForm" component={RegisterForm} />
