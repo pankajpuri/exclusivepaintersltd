@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getImageSource from "./datas/productsData";
+import getImageSource from "./datas/productDatas";
 class Products extends Component {
   state = {
     imagesource: getImageSource(),

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getServiceData, { serviceData } from "./datas/serviceData";
+import getServiceData from "./datas/serviceDatas";
 class Services extends Component {
   state = {
     datas: [],

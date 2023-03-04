@@ -72,3 +72,22 @@ This will also give documentation to your component, so wheneveer you
   need to install the package proptypes as follows
  npm i prop-types@15.6.2
  impoorrt PropTypes from 'proop-types'
+
+
+ // for the backend http request
+ import axios from "axios"
+ npm i axios@0.18
+
+ //for the toasting message
+ import {ToastContainer} from "react-toastify"
+ import "react-toastify/dist/ReactToastify.css"
+ npm i react-toastify@4.1
+ import {toast} from "react-toastify"
+ eg: toast.error("unexpected error is occured!") to the page you want to throw error
+ and add <ToastContainer/> in your return method.
+
+ //install brew from brew.shif
+ //brew install mongodb //installing mongodb
+ //sudo mkdir -p /data/db // creating directory for mongodb to store data
+ //sudo chown -R `id -un` /data/db // data directory is ready, it's configured with right permission
+ //mongod //mongo demon -> service that runs on the background, listen for connections on a given port

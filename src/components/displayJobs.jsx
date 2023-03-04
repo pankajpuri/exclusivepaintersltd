@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { getJobs } from "../jobs/jobs";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
-import { getJobType } from "../jobs/jobtypesAPI";
+import { getJobType } from "../services/jobTypes";
 import JobTypes from "./common/displayJobTypes";
 import "bootstrap/dist/css/bootstrap.css";
 import JobTables from "./jobTables";
 import SearchBox from "./common/searchBox";
 import _ from "lodash";
 import { Link } from "react-router-dom";
+
 class DisplayJobs extends Component {
   state = {
     jobs: [],
@@ -19,8 +20,10 @@ class DisplayJobs extends Component {
     selectedJobType: null,
     sortColumn: { path: "address", order: "asc" },
   };
-  componentDidMount() {
-    const jobTypes = [{ _id: "", type: "All Job Types" }, ...getJobType()];
+  async componentDidMount() {
+    const { data } = await getJobType();
+    const jobTypes = [{ _id: "", type: "All Job Types" }, ...data];
+    console.log("datas are :", jobTypes);
     this.setState({ jobTypes, jobs: getJobs() });
   }
   handleDelete = (job) => {

@@ -11,44 +11,23 @@ import JobForm from "./components/jobForm";
 import LoginForm from "./components/common/loginForm";
 import RegisterForm from "./components/common/registerForm";
 import Home from "./components/home";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Products from "./components/products";
 import ContactForm from "./components/contactform";
 import Services from "./components/services";
 import About from "./components/about";
 import Footer from "./components/footer";
-import React, { useEffect } from "react";
+import React from "react";
 
+import "react-toastify/dist/ReactToastify.css";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel";
 function App() {
-  // useEffect(() => {
-  //   $(".owl-carousel").OwlCarousel({
-  //     loop: true,
-  //     margin: 10,
-  //     nav: true,
-  //     autoplay: true,
-  //     autoplayTimeout: 3000,
-  //     autoplayHoverPause: true,
-  //     center: true,
-  //     // navText: [
-  //     //   "<i class='fa fa-angle-left'></i>",
-  //     //   "<i class='fa fa-angle-right'></i>",
-  //     // ],
-  //     responsive: {
-  //       0: {
-  //         items: 1,
-  //       },
-  //       600: {
-  //         items: 1,
-  //       },
-  //       1000: {
-  //         items: 3,
-  //       },
-  //     },
-  //   });
-  // });
   return (
     <React.Fragment>
       <div className="container-fluid">
+        <ToastContainer />
         <Navbar />
         {/* <DisplayJobs /> */}
         <div>

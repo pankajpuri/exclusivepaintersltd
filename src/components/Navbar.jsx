@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import $ from "jquery";
+import "../loader";
 class Navbar extends Component {
   state = {};
+  componentDidMount() {
+    $(document).on("click", function(e) {
+      e.preventDefault();
+      $(".collapse").collapse("hide");
+    });
+  }
 
   render() {
     return (
@@ -90,7 +98,7 @@ class Navbar extends Component {
                     Contact
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <NavLink
                     className="nav-link text-uppercase"
                     aria-current="page"
@@ -98,12 +106,12 @@ class Navbar extends Component {
                   >
                     Jobs
                   </NavLink>
-                </li>
-                <li className="nav-item">
+                </li> */}
+                {/* <li className="nav-item">
                   <NavLink className="nav-link text-uppercase" to="/customers">
                     Customers
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <NavLink className="nav-link text-uppercase" to="/contract">
                     Contracts

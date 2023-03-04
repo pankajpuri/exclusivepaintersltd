@@ -4,11 +4,6 @@ import IntroductionSection from "./introductionSection";
 import Projects from "./project";
 import getJobDatas from "./datas/jobDatas";
 import Reviews from "./reviews";
-import "jquery-ui-dist/jquery-ui";
-import "jquery/dist/jquery.js";
-import "bootstrap/dist/js/bootstrap.js";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel";
 
 class Home extends Component {
   state = {
