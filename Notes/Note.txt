@@ -1,0 +1,93 @@
+
+//for validation 
+    npm i joi-browser@13.4
+    import Joi from "joi-browser"; // in the actual form like login/register
+    const schema = {}
+//Query string
+ npm i query-string@6.1.0
+
+//React router
+ i. this is for React dom or browser but for this we only using this
+ npm i react-router-dom@4.3.1
+  .import {Browser} from "react-router-dom"; //In index.JSX
+  ..<BrowserRouter><App></App></BrowserRouter>
+ .import {Route,Switch} from 'react-router-dom'; //Whichever page is using navigation
+ ..<Switch>
+     <Router path='/About' component={About}/>
+    </Switch>
+
+ ii. this is for native mobile applications
+ npm i react-router-native 
+//
+ shift+command+p => to wrap the element with desire tag like <div></div>
+ select the line you want to move then 
+  alt + up
+
+  cltr + D = to select similar tag
+ //Auto Import - ES6, TS, JSX, TSX
+ install this plugins to auto import 
+
+//fontawesome
+npm install fontawesome@4.7.0
+
+//Bootstrap
+npm install bootstrap@5.1.3
+
+//React reveal is an animation fo React. 
+npm install react-reveal --save
+
+//remove if somehow you mess it up with their version
+  npm rm react react-dom 
+//install back
+ npm i -s react react-dom
+//install lodash javascript library
+npm i lodash@4.17.10
+import _ from "lodash"
+//it provides pagination method
+
+//install props-type for type checking
+npm i props-type@15.6.2
+import PropTypes from 'prop-types'
+
+"react": "^18.2.0",
+    "react-dom": "^18.2.0",
+
+//Git command
+1. create repository on github
+2. go to command line on react app and type
+    git remote add origin https://github.com/pankajpuri/exclusivepaintersltd.git
+3. Now your poject is hooked to the github.
+then following 
+    i.  git add .
+    ii. git commit -m "first commit"
+/////////////////
+git branch -M main
+git remote add origin https://github.com/pankajpuri/exclusivepaintersltd.git
+git push -u origin main
+
+//Types checking - enables to catch bugs related to typpe checking.
+This will also give documentation to your component, so wheneveer you
+ want to use a reuseable comoponent, you don't have to look at it's render memthod
+ to figure out what props yoou should give to this component
+  need to install the package proptypes as follows
+ npm i prop-types@15.6.2
+ impoorrt PropTypes from 'proop-types'
+
+
+ // for the backend http request
+ import axios from "axios"
+ npm i axios@0.18
+
+ //for the toasting message
+ import {ToastContainer} from "react-toastify"
+ import "react-toastify/dist/ReactToastify.css"
+ npm i react-toastify@4.1
+ import {toast} from "react-toastify"
+ eg: toast.error("unexpected error is occured!") to the page you want to throw error
+ and add <ToastContainer/> in your return method.
+
+ //install brew from brew.shif
+ //brew install mongodb //installing mongodb
+ //sudo mkdir -p /data/db // creating directory for mongodb to store data
+ //sudo chown -R `id -un` /data/db // data directory is ready, it's configured with right permission
+ //mongod //mongo demon -> service that runs on the background, listen for connections on a given port
