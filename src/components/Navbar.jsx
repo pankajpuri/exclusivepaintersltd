@@ -7,6 +7,7 @@ class Navbar extends Component {
   componentDidMount() {
     $(document).on("click", function(e) {
       e.preventDefault();
+      // console.log("");
       $(".collapse").collapse("hide");
     });
   }
