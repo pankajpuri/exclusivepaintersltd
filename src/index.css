@@ -805,7 +805,7 @@ grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
 #services {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("/images/section/section_bg02.jpg");
+  background-image: url("images/section/section_bg02.jpg");
 }
 
 @media (max-width: 991.98px) {
