@@ -124,7 +124,7 @@ textarea {
 .product {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("/images/section/sectionbg02.jpg");
+  background-image: url("/images/section/sectionbg02.JPG");
 }
 
 .product_title {
@@ -216,7 +216,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("/images/banners/5.jpg");
+  background-image: url("/images/banners/5.JPG");
 }
 
 .banner {
@@ -228,7 +228,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("/images/banners/8.jpg");
+  background-image: url("/images/banners/8.JPG");
 }
 
 .banner_contents {
@@ -332,7 +332,7 @@ textarea {
 }
 
 .contact-info-area {
-  background-image: url("/images/section/sectionbg04.jpg");
+  background-image: url("/images/section/sectionbg04.JPG");
 }
 
 .contact-info-area h3 {
@@ -805,7 +805,7 @@ grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));*/
 #services {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("images/section/sectionbg02.jpg");
+  background-image: url("images/section/sectionbg02.JPG");
 }
 
 @media (max-width: 991.98px) {
