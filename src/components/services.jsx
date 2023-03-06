@@ -23,6 +23,7 @@ class Services extends Component {
 
             {this.state.datas.map((data) => (
               <div
+                key={data.id}
                 className="row serviceCard"
                 style={{ padding: "25px 0 25px 0", marginTop: "25px" }}
               >
@@ -41,7 +42,7 @@ class Services extends Component {
                   <img
                     style={{ width: "40rem" }}
                     src={data.imgsrc}
-                    class="card-img-right img-fluid"
+                    className="card-img-right img-fluid"
                   />
                 </div>
               </div>
