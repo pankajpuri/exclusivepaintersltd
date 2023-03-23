@@ -1,4 +1,5 @@
 import React from "react";
+import intro from "./assests/images/introductions/intro.jpeg";
 const IntroductionSection = () => {
   return (
     <section id="introduction-section" className="container-fluid">
@@ -12,7 +13,7 @@ const IntroductionSection = () => {
           // }}
         >
           <div className="col-lg-7 ">
-            <img src="../images/introductions/intro.jpeg" alt="" />
+            <img src={intro} alt="" />
           </div>
           <div className="col-lg-5">
             <h1>Welcome to Exclusive Painters</h1>

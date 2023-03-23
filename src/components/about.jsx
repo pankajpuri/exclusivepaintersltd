@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import img3 from "./assests/images/introductions/img3.jpeg";
 class About extends Component {
   state = {};
   render() {
@@ -6,7 +7,7 @@ class About extends Component {
       <section id="About">
         <div className="container-fit">
           <img
-            src="/images/introductions/3.jpeg"
+            src={img3}
             style={{ objectFit: "cover", height: "50vh", width: "100%" }}
           />
           <div className="container">

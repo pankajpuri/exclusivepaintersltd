@@ -1,27 +1,34 @@
+import resene from "../assests/images/paintingbrand/resene.jpg";
+import dulux from "../assests/images/paintingbrand/dulux.jpg";
+import aalto from "../assests/images/paintingbrand/aalto.jpg";
+import porters from "../assests/images/paintingbrand/porters.jpg";
+import sikkens from "../assests/images/paintingbrand/sikkens.jpg";
+import wattyl from "../assests/images/paintingbrand/wattyl.jpg";
+
 export const productList = [
   {
     id: "1exproduct",
-    imagesource: "/images/paintingbrand/resene.jpg",
+    imagesource: `${resene}`,
   },
   {
     id: "2exproduct",
-    imagesource: "/images/paintingbrand/dulux.jpg",
+    imagesource: `${dulux}`,
   },
   {
     id: "3exproduct",
-    imagesource: "/images/paintingbrand/aalto.jpg",
+    imagesource: `${aalto}`,
   },
   {
     id: "4exproduct",
-    imagesource: "/images/paintingbrand/porters.jpg",
+    imagesource: `${porters}`,
   },
   {
     id: "5exproduct",
-    imagesource: "/images/paintingbrand/sikkens.jpg",
+    imagesource: `${sikkens}`,
   },
   {
     id: "6exproduct",
-    imagesource: "/images/paintingbrand/wattyl.jpg",
+    imagesource: `${wattyl}`,
   },
 ];
 
