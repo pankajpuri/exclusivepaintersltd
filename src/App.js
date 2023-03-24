@@ -43,9 +43,9 @@ function App() {
             <Route path="/contract" component={Contract} />
             <Route path="/displayJobs" component={DisplayJobs} />
             <Route path="/notFound" component={NotFound} />
+            <Route path="/exclusivepaintersltd" component={Home} />
             <Route path="/home" component={Home} />
             <Redirect from="/" exact to="/home" />
-
             <Redirect to="/notFound" />
           </Switch>
         </div>
