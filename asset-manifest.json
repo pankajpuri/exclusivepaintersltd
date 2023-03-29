@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/exclusivepaintersltd/static/css/main.62a8c711.css",
-    "main.js": "/exclusivepaintersltd/static/js/main.aba2bac7.js",
+    "main.js": "/exclusivepaintersltd/static/js/main.55d9f2b1.js",
     "static/js/787.afe09e0e.chunk.js": "/exclusivepaintersltd/static/js/787.afe09e0e.chunk.js",
     "static/media/fence.jpg": "/exclusivepaintersltd/static/media/fence.68b2c59667641d09a5d3.jpg",
     "static/media/roof1.jpg": "/exclusivepaintersltd/static/media/roof1.df24b2d5c91ff3622fd2.jpg",
@@ -35,11 +35,11 @@
     "static/media/dulux.jpg": "/exclusivepaintersltd/static/media/dulux.9db2311c44ad4e716548.jpg",
     "index.html": "/exclusivepaintersltd/index.html",
     "main.62a8c711.css.map": "/exclusivepaintersltd/static/css/main.62a8c711.css.map",
-    "main.aba2bac7.js.map": "/exclusivepaintersltd/static/js/main.aba2bac7.js.map",
+    "main.55d9f2b1.js.map": "/exclusivepaintersltd/static/js/main.55d9f2b1.js.map",
     "787.afe09e0e.chunk.js.map": "/exclusivepaintersltd/static/js/787.afe09e0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62a8c711.css",
-    "static/js/main.aba2bac7.js"
+    "static/js/main.55d9f2b1.js"
   ]
 }
