@@ -1,1 +1,21 @@
-![https://camo.githubusercontent.com/a2ef46f4aec1799b4366d5dd9e4cc60c250b9a4a1e0a4cea21bae63660b63a25/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6578742e6a732d3030303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d6e657874646f746a73266c6f676f436f6c6f723d7768697465](https://pankajpuri.github.io/portfolio/)
+# Hi, I am Pankaj Puri
+## About The Project: ## 
+[Exclusive Painters](https://pankajpuri.github.io/exclusivepaintersltd/)
+  This is a MERN based responsive web application designed for Exclusive Painters. It's front is 90%   is done. At the moment I am working on backend part. Please click the image below to view it. It     is hosted using gh-pages.
+  
+  
+### Built With
+
+- `React`
+- `Javascript`
+- `Bootstrap`
+- `JQuery`
+- `Node.JS`
+- `Express.JS`
+- `MongoDb`
+
+Please visit my portfolio by clicking the link below.
+
+[https://pankajpuri.github.io/portfolio/](https://pankajpuri.github.io/portfolio/)
+
+[Exclusive Painters](https://pankajpuri.github.io/exclusivepaintersltd/)
