@@ -384,16 +384,21 @@ textarea {
 }
 
 .submit-btn2 {
-  background: #ec5b53;
+  background: #5a5788 !important;
   width: 100%;
   height: 60px;
   padding: 10px 20px;
-  border: 0;
-  color: #fff;
+  border: 0px;
+  color: #fff !important;
   text-transform: capitalize;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 700 !important;
   border-radius: 0px;
+}
+.submit-btn2:hover {
+  font-weight: 800 !important;
+  background-color: rgb(48, 42, 135) !important;
 }
 
 /* @media (max-width: 575.98px) {

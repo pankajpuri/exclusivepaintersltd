@@ -9,7 +9,7 @@ class Reviews extends Component {
   componentDidMount() {
     $(() => {
       $("#google-reviews").googlePlaces({
-        placeId: "ChIJySgVASFHDW0RUU63nGKKMwc", //Find placeID @: https://developers.google.com/places/place-id
+        placeId: "ChIJySgVASFHDW0RUU63nGKKMwc", //"ChIJySgVASFHDW0RUU63nGKKMwc", //Find placeID @: https://developers.google.com/places/place-id
         render: ["reviews"],
         min_rating: 0,
         max_row: 0,
@@ -43,6 +43,7 @@ class Reviews extends Component {
             <h1 className="pb-4 text-center section-heading">Reviews</h1>
             <div className="d-flex justify-content-center">
               <div className="col-lg-6">
+                hello
                 <div
                   id="google-reviews"
                   className="shadow-lg p-3 mb-5 bg-body "

@@ -7,6 +7,7 @@ class About extends Component {
       <section id="About">
         <div className="container-fit">
           <img
+            alt=""
             src={img3}
             style={{ objectFit: "cover", height: "50vh", width: "100%" }}
           />
